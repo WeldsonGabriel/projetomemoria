@@ -1,0 +1,152 @@
+/* Estilo base e reset */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #baf8f3;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.menu button:hover {
+    background-color: #e4e4e4;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 950px;
+    background-color: #3ffaea;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 40px 0;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px); /* Cart�es agora com 100px de largura */
+    justify-content: center;
+    gap: 10px;
+}
+
+.card {
+    width: 100px;  
+    height: 100px;
+    position: relative;
+    cursor: pointer;
+    background-color: #eee;
+    border-radius: 8px; 
+}
+
+.card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+}
+
+.card-content p {
+    font-size: 12px; 
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    backface-visibility: hidden;
+}
+
+.card img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.card.flipped .card-content {
+    transform: rotateY(0deg);
+}
+
+/* Cores de fundo para os tipos de Pok�mon */
+/* ... (como previamente fornecido) ... */
+/* ... (outros estilos) ... */
+
+@keyframes confetti {
+    0% { background-position: 0% 100%; }
+    100% { background-position: 100% 0%; }
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #ffcccc, #ccffcc, #ccccff, #ffccff);
+    background-size: 400% 400%;
+    animation: confetti 5s infinite;
+}
+
+.celebrate {
+    font-weight: bold;
+    color: gold;
+}
+
+/* ... (outros estilos) ... */
+
+
+
+
+/* Cores de fundo para os tipos de Pok�mon */
+[data-card-type="normal"] .card-content { background-color: #A8A878; }
+[data-card-type="fire"] .card-content { background-color: #F08030; }
+[data-card-type="water"] .card-content { background-color: #6890F0; }
+[data-card-type="electric"] .card-content { background-color: #F8D030; }
+[data-card-type="grass"] .card-content { background-color: #78C850; }
+[data-card-type="ice"] .card-content { background-color: #98D8D8; }
+[data-card-type="fighting"] .card-content { background-color: #C03028; }
+[data-card-type="poison"] .card-content { background-color: #A040A0; }
+[data-card-type="ground"] .card-content { background-color: #E0C068; }
+[data-card-type="flying"] .card-content { background-color: #A890F0; }
+[data-card-type="psychic"] .card-content { background-color: #F85888; }
+[data-card-type="bug"] .card-content { background-color: #A8B820; }
+[data-card-type="rock"] .card-content { background-color: #B8A038; }
+[data-card-type="ghost"] .card-content { background-color: #705898; }
+[data-card-type="dark"] .card-content { background-color: #705848; }
+[data-card-type="dragon"] .card-content { background-color: #7038F8; }
+[data-card-type="steel"] .card-content { background-color: #B8B8D0; }
+[data-card-type="fairy"] .card-content { background-color: #EE99AC; }
